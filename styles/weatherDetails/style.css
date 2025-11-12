@@ -1,0 +1,14 @@
+.weather__details {
+  min-height: 408px;
+}
+
+.weather__cards {
+  display: grid;
+  grid-template-columns: 158px 158px 158px;
+  grid-template-rows: 196px 196px;
+  gap: calc(var(--margin) / 2);
+}
+.weather__card {
+  border-radius: var(--radius);
+  background: var(--bg-opacity);
+}

@@ -1,0 +1,35 @@
+.weather__today {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  font-size: 20px;
+  min-height: 408px;
+  padding: calc(var(--margin) / 4);
+}
+
+.weather__today-title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+}
+.weather__today-date {
+  line-height: 40px;
+}
+.weather__today-time {
+}
+.weather__today-temperature {
+  font-weight: 700;
+  font-size: 112px;
+  line-height: 112px;
+}
+
+.weather__today-info {
+  display: flex;
+  justify-content: center;
+  line-height: 40px;
+}
+.weather__today-info span {
+  margin-left: 8px;
+}

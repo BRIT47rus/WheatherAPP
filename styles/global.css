@@ -1,0 +1,57 @@
+body {
+  font-family: 'Raleway', monospace;
+  font-weight: 100;
+  line-height: 24px;
+  letter-spacing: 0;
+  font-variant-numeric: lining-nums proportional-nums;
+  -webkit-font-smoothing: antialiased;
+  display: flex;
+  justify-content: center;
+  color: var(--color-font-main);
+  background-image: url('../public/images/bgWeather.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: var(--color-font-secondary);
+  width: none;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-width: 1120px;
+  width: 1120px;
+  min-height: 860px;
+  margin-top: var(--margin);
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(18px);
+  border-radius: var(--radius);
+}
+.full-width-padd {
+  width: 100%;
+  padding: var(--margin);
+}
+.icon {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+.activ-input {
+  background: var(--bg-input-active) !important;
+}
+
+.temperature::after {
+  content: '°';
+}
+.screen-reader-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}

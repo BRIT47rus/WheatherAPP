@@ -1,0 +1,5 @@
+.weather {
+  display: grid;
+  grid-template-columns: 534px 506px;
+  gap: calc(var(--margin) / 2);
+}

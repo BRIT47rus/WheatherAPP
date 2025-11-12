@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <title>WeatherApp</title>
+  </head>
+  <body>
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+      <defs>
+        <symbol id="iconSearch" viewBox="0 0 24 24" fill="none">
+          <path
+            d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z"
+            stroke="#545454"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M20.9999 20.9999L16.6499 16.6499"
+            stroke="#545454"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </symbol>
+        <symbol id="iconClose" viewBox="0 0 24 24" fill="none">
+          <path
+            d="M4.65041 5.95141C4.2912 5.59221 4.29119 5.00983 4.65039 4.65062C5.00958 4.29141 5.59197 4.2914 5.95118 4.65059L19.3496 18.0485C19.7088 18.4077 19.7088 18.9901 19.3496 19.3493C18.9904 19.7085 18.408 19.7086 18.0488 19.3494L4.65041 5.95141Z"
+            fill="#545454"
+            stroke="#545454"
+            stroke-width="0.5"
+          />
+          <path
+            d="M4.65084 19.3496C4.29163 18.9904 4.29161 18.408 4.65081 18.0488L18.0488 4.6504C18.408 4.29119 18.9903 4.29118 19.3496 4.65038C19.7088 5.00957 19.7088 5.59196 19.3496 5.95117L5.95163 19.3496C5.59243 19.7088 5.01005 19.7088 4.65084 19.3496Z"
+            fill="#545454"
+            stroke="#545454"
+            stroke-width="0.5"
+          />
+        </symbol>
+      </defs>
+    </svg>
+
+    <div class="container">
+      <header class="header full-width-padd">
+        <img
+          src="./public/images/logo.svg"
+          alt="Логотип приложения WeatherApp"
+          width="192"
+          height="30"
+        />
+        <div class="input header__search">
+          <input type="text" placeholder="Поиск по городу" id="searchInput" />
+          <svg class="icon">
+            <use href="#iconSearch" id="iconInput"></use>
+          </svg>
+        </div>
+      </header>
+      <main class="weather full-width-padd">
+        <section class="weather__today">
+          <h2 class="screen-reader-only">Информация погоды на сегодня</h2>
+          <div>
+            <h2 class="weather__today-title">Москва</h2>
+            <span class="weather__today-date">Суббота, 06 января</span>
+            <p class="weather__today-time">11:29</p>
+          </div>
+          <div>
+            <span class="weather__today-temperature temperature">-7</span>
+          </div>
+          <div>
+            <p class="weather__today-info">
+              <img
+                src="./public/images/weaterIcon/cloudly.svg"
+                alt="Облачно"
+                width="24"
+                height="24"
+              />
+              <span>Облачно</span>
+            </p>
+            <p class="weather__today-feels">Ощущается как <span class="temperature">-11</span></p>
+          </div>
+        </section>
+        <section class="weather__details">
+          <h2 class="screen-reader-only">Карточки погоды</h2>
+          <ul class="weather__cards">
+            <li class="weather__card"></li>
+            <li class="weather__card"></li>
+            <li class="weather__card"></li>
+            <li class="weather__card"></li>
+            <li class="weather__card"></li>
+            <li class="weather__card"></li>
+          </ul>
+        </section>
+      </main>
+    </div>
+    <script src="./script.js" defer></script>
+  </body>
+</html>
