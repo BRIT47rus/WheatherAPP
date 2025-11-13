@@ -4,19 +4,12 @@
   --bg-opacity: rgb(245 244 244 / 40%);
 
   --color-input-typing: #202020;
-  --bg-input-active: #dadada;
 
+  --bg-input: #f5f4f466;
+
+  --bg-input-active: #dadada;
+  --bg-input-hover: #dadada;
   --margin: 32px;
   --radius: 8px;
   --opacity: 0.5;
-}
-
-@media (max-width: 1280px) {
-  body {
-    overflow-x: scroll;
-    width: 1280px;
-  }
-  .container {
-    margin: auto 80px;
-  }
 }

@@ -20,6 +20,7 @@
     <title>WeatherApp</title>
   </head>
   <body>
+    <script src="./script.js" defer></script>
     <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
       <defs>
         <symbol id="iconSearch" viewBox="0 0 24 24" fill="none">
@@ -65,18 +66,20 @@
         />
         <div class="input header__search">
           <input type="text" placeholder="Поиск по городу" id="searchInput" />
-          <svg class="icon">
-            <use href="#iconSearch" id="iconInput"></use>
-          </svg>
+          <button type="button" id="searchInputButton" aria-label="кнопка поиска">
+            <svg class="icon">
+              <use href="#iconSearch" id="iconInput"></use>
+            </svg>
+          </button>
         </div>
       </header>
       <main class="weather full-width-padd">
         <section class="weather__today">
-          <h2 class="screen-reader-only">Информация погоды на сегодня</h2>
+          <h1 class="screen-reader-only">Информация погоды на сегодня</h1>
           <div>
             <h2 class="weather__today-title">Москва</h2>
-            <span class="weather__today-date">Суббота, 06 января</span>
-            <p class="weather__today-time">11:29</p>
+            <time class="weather__today-date" datetime="2025-01-06">Суббота, 06 января</time><br />
+            <time class="weather__today-time" datetime="11:29">11:29</time>
           </div>
           <div>
             <span class="weather__today-temperature temperature">-7</span>
@@ -107,6 +110,5 @@
         </section>
       </main>
     </div>
-    <script src="./script.js" defer></script>
   </body>
 </html>

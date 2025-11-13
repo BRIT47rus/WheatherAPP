@@ -1,16 +1,40 @@
 const searchInput = document.getElementById('searchInput');
 const iconInput = document.getElementById('iconInput');
+const searchInputButton = document.getElementById('searchInputButton');
 
-searchInput.addEventListener('input', (e) => {
-  const { value } = e.target;
-  if (value.trim()) {
-    console.log(searchInput.parentElement);
-    searchInput.parentElement.classList.add('activ-input');
-    iconInput.setAttribute('href', '#iconClose');
+function handleSearchButtonClick() {
+  const currentIcon = iconInput.getAttribute('href');
+
+  if (currentIcon === '#iconClose') {
+    searchInput.value = '';
+    changeValueSearchInput({ target: searchInput });
+    searchInput.focus();
   } else {
-    searchInput.parentElement.classList.remove('activ-input');
+    const searchText = searchInput.value.trim();
+    if (searchText) {
+      // Здесь должна быть логика отправки запроса
+    } else {
+      searchInput.focus();
+    }
+  }
+}
+
+function changeValueSearchInput(event) {
+  const value = event.target.value;
+
+  if (value.trim()) {
+    searchInputButton.setAttribute('aria-label', 'Очистить поле поиска');
+    iconInput.setAttribute('href', '#iconClose');
+    console.log(value);
+  } else {
+    searchInputButton.setAttribute('aria-label', 'Начать поиск');
     iconInput.setAttribute('href', '#iconSearch');
   }
+}
 
-  console.log(value);
+searchInput.addEventListener('input', changeValueSearchInput);
+searchInputButton.addEventListener('click', handleSearchButtonClick);
+
+window.addEventListener('load', () => {
+  changeValueSearchInput({ target: searchInput });
 });

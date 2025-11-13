@@ -1,4 +1,10 @@
 body {
+  min-height: 100dvh;
+  min-width: 1280px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 32px;
   font-family: 'Raleway', monospace;
   font-weight: 100;
   line-height: 24px;
@@ -14,19 +20,16 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-color: var(--color-font-secondary);
-  width: none;
 }
 
 .container {
   display: flex;
   flex-direction: column;
-  min-width: 1120px;
-  width: 1120px;
-  min-height: 860px;
-  margin-top: var(--margin);
   background-color: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(18px);
   border-radius: var(--radius);
+  min-height: 100dvh;
+  min-width: 1120px;
 }
 .full-width-padd {
   width: 100%;
@@ -36,9 +39,6 @@ body {
   width: 24px;
   height: 24px;
   cursor: pointer;
-}
-.activ-input {
-  background: var(--bg-input-active) !important;
 }
 
 .temperature::after {

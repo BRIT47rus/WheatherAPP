@@ -17,16 +17,19 @@
 .weather__today-date {
   line-height: 40px;
 }
-.weather__today-time {
-}
+
 .weather__today-temperature {
+  display: flex;
+  text-align: center;
   font-weight: 700;
   font-size: 112px;
-  line-height: 112px;
+  line-height: 122px;
+  height: 112px;
 }
 
 .weather__today-info {
   display: flex;
+  align-items: center;
   justify-content: center;
   line-height: 40px;
 }
