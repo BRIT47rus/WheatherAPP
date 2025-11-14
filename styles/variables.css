@@ -3,12 +3,20 @@
   --color-font-secondary: #707070;
   --bg-opacity: rgb(245 244 244 / 40%);
 
+  --color-font-details: #202020;
+  --bg-gradient-line: radial-gradient(
+    50% 9453.13% at 50% 50%,
+    rgba(84, 84, 84, 0.4) 0%,
+    rgba(138, 138, 138, 0.4) 45.12%,
+    #dadada 100%,
+    rgba(218, 218, 218, 0.4) 100%
+  );
+
   --color-input-typing: #202020;
-
   --bg-input: #f5f4f466;
-
   --bg-input-active: #dadada;
   --bg-input-hover: #dadada;
+
   --margin: 32px;
   --radius: 8px;
   --opacity: 0.5;

@@ -20,7 +20,7 @@
     <title>WeatherApp</title>
   </head>
   <body>
-    <script src="./script.js" defer></script>
+    <script src="./script.js" defer type="module"></script>
     <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
       <defs>
         <symbol id="iconSearch" viewBox="0 0 24 24" fill="none">
@@ -100,12 +100,103 @@
         <section class="weather__details">
           <h2 class="screen-reader-only">Карточки погоды</h2>
           <ul class="weather__cards">
-            <li class="weather__card"></li>
-            <li class="weather__card"></li>
-            <li class="weather__card"></li>
-            <li class="weather__card"></li>
-            <li class="weather__card"></li>
-            <li class="weather__card"></li>
+            <li class="weather__card">
+              <h3 class="weather__card-title">Влажность</h3>
+              <image
+                src="./public/images/detailsIcons/humidity.svg"
+                width="32"
+                height="32"
+                class="icon-weather"
+                alt=""
+              />
+              <p class="weather__card-value">75 %</p>
+
+              <div class="wheater__card-content">
+                <div class="weather__card-bar">
+                  <div class="progress-line">
+                    <div class="thumb"></div>
+                  </div>
+                </div>
+                <div class="weather__card-percent"><span>0%</span><span>100%</span></div>
+              </div>
+            </li>
+            <li class="weather__card">
+              <h3 class="weather__card-title">Давление</h3>
+              <image
+                src="./public/images/detailsIcons/barometr.svg"
+                width="32"
+                height="32"
+                class="icon-weather"
+                alt=""
+              />
+              <p class="weather__card-value">761</p>
+
+              <div class="wheater__card-content">
+                <div class="weather__card-bar">
+                  <div class="dangers"></div>
+                  <div class="progress-line">
+                    <div class="thumb"></div>
+                  </div>
+                </div>
+                <div class="weather__card-state">Повышенное</div>
+              </div>
+            </li>
+            <li class="weather__card">
+              <h3 class="weather__card-title">Видимость</h3>
+              <image
+                src="./public/images/detailsIcons/visibility.svg"
+                width="32"
+                height="32"
+                class="icon-weather"
+                alt=""
+              />
+              <p class="weather__card-value">28 км</p>
+              <div class="wheater__card-content">
+                <div class="weather__card-bar">
+                  <div class="progress-line">
+                    <div class="thumb"></div>
+                  </div>
+                </div>
+                <div class="weather__card-state">Нормальная</div>
+              </div>
+            </li>
+            <li class="weather__card">
+              <h3 class="weather__card-title">Рассвет</h3>
+              <image
+                src="./public/images/detailsIcons/sunrise.svg"
+                width="32"
+                height="32"
+                class="icon-weather"
+                alt=""
+              />
+              <p class="weather__card-number-value"><time datetime="8:42">8:42</time></p>
+              <div class="weather__card-state">Прошло: 02:47</div>
+            </li>
+            <li class="weather__card">
+              <h3 class="weather__card-title">Закат</h3>
+              <image
+                src="./public/images/detailsIcons/sunset.svg"
+                width="32"
+                height="32"
+                class="icon-weather"
+                alt=""
+              />
+
+              <p class="weather__card-number-value"><time datetime="16:37">16:37</time></p>
+              <div class="weather__card-state">Осталось: 05:08</div>
+            </li>
+            <li class="weather__card">
+              <h3 class="weather__card-title">Сила ветра</h3>
+              <image
+                src="./public/images/detailsIcons/arrow.svg"
+                width="32"
+                height="32"
+                class="icon-weather"
+                alt=""
+              />
+              <p class="weather__card-number-value">2 м/с</p>
+              <div class="weather__card-state">Северо-западный</div>
+            </li>
           </ul>
         </section>
       </main>

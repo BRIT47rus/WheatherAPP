@@ -1,0 +1,52 @@
+{
+  "dataDetails": [
+    {
+      "id": "1",
+      "title": "Влажность",
+      "icon": "./public/images/detailsIcons/humidity.svg",
+      "value": "75",
+      "state": "",
+      "typeState": "percent"
+    },
+    {
+      "id": "2",
+      "title": "Давление",
+      "icon": "./public/images/detailsIcons/barometr.svg",
+      "value": "761",
+      "state": "Повышенное",
+      "typeState": "barometr"
+    },
+    {
+      "id": "3",
+      "title": "Видимость",
+      "icon": "./public/images/detailsIcons/visibility.svg",
+      "value": "28",
+      "state": "Нормальная",
+      "typeState": "distance"
+    },
+    {
+      "id": "4",
+      "title": "Рассвет",
+      "icon": "./public/images/detailsIcons/sunrise.svg",
+      "value": "8:42",
+      "state": "Прошло: 02:47",
+      "typeState": "time"
+    },
+    {
+      "id": "5",
+      "title": "Закат",
+      "icon": "./public/images/detailsIcons/sunset.svg",
+      "value": "16:37",
+      "state": "Осталось: 05:08",
+      "typeState": "time"
+    },
+    {
+      "id": "6",
+      "title": "Сила ветра",
+      "icon": "./public/images/detailsIcons/arrow.svg",
+      "value": "2",
+      "state": "Северо-западный",
+      "typeState": "speed"
+    }
+  ]
+}
