@@ -1,39 +1,37 @@
-const searchInput = document.getElementById('searchInput');
-const iconInput = document.getElementById('iconInput');
-const searchInputButton = document.getElementById('searchInputButton');
+const pathSpriteSvg = '../../public/icons-sprite.svg';
 
-function handleSearchButtonClick() {
-  const currentIcon = iconInput.getAttribute('href');
-
+function handleSearchButtonClick(icon, event, input) {
+  const currentIcon = icon.getAttribute('href').split(pathSpriteSvg)[1];
   if (currentIcon === '#iconClose') {
-    searchInput.value = '';
-    changeValueSearchInput({ target: searchInput });
-    searchInput.focus();
+    input.value = '';
+    changeValueSearchInput({ target: input }, event.target, icon);
+    input.focus();
   } else {
-    const searchText = searchInput.value.trim();
+    const searchText = input.value.trim();
     if (searchText) {
-      // Здесь должна быть логика отправки запроса
+      console.log('Отправка запроса:', searchText);
     } else {
-      searchInput.focus();
+      input.focus();
     }
   }
 }
-const pathSpriteSvg = '../../public/icons-sprite.svg';
-function changeValueSearchInput(event) {
+
+function changeValueSearchInput(event, inputBTN, icon) {
   const value = event.target.value;
 
   if (value.trim()) {
-    searchInputButton.setAttribute('aria-label', 'Очистить поле поиска');
-    iconInput.setAttribute('href', pathSpriteSvg + '#iconClose');
-    searchInputButton.setAttribute('tabindex', '0');
+    inputBTN.setAttribute('aria-label', 'Очистить поле поиска');
+    icon.setAttribute('href', pathSpriteSvg + '#iconClose');
+    inputBTN.setAttribute('tabindex', '0');
     console.log(value);
   } else {
-    searchInputButton.setAttribute('aria-label', 'Начать поиск');
-    iconInput.setAttribute('href', pathSpriteSvg + '#iconSearch');
+    inputBTN.setAttribute('aria-label', 'Начать поиск');
+    icon.setAttribute('href', pathSpriteSvg + '#iconSearch');
   }
 }
 
-export default function searchInputListener() {
-  searchInput.addEventListener('input', changeValueSearchInput);
-  searchInputButton.addEventListener('click', handleSearchButtonClick);
+export default function searchInputListener(input, inputBTN, icon) {
+  input.addEventListener('input', (event) => changeValueSearchInput(event, inputBTN, icon));
+
+  inputBTN.addEventListener('click', (event) => handleSearchButtonClick(icon, event, input));
 }

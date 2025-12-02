@@ -29,7 +29,6 @@ body {
   background-color: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(18px);
   border-radius: var(--radius);
-  min-height: 100dvh;
   min-width: 1120px;
 }
 .full-width-padd {
@@ -41,7 +40,7 @@ body {
   height: 24px;
   cursor: pointer;
 }
-
+.slider__list-temperature::after,
 .temperature::after {
   content: '°';
 }
@@ -55,6 +54,11 @@ body {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border-width: 0;
+}
+.active-button {
+  color: var(--color-font-main);
+  text-decoration-color: var(--color-font-main);
+  cursor: default;
 }
 
 @media (max-width: 1279px) {

@@ -1,0 +1,17 @@
+.footer {
+  --color-font: rgba(245, 244, 244, 0.8);
+  display: flex;
+  grid-area: footer;
+  justify-content: center;
+  margin-top: -32px;
+  padding-bottom: 32px;
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--color-font);
+  & a {
+    color: var(--color-font);
+    text-decoration: none;
+    height: 20px;
+    border-bottom: 1px solid var(--color-font);
+  }
+}

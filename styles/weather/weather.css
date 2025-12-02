@@ -1,5 +1,9 @@
 .weather {
   display: grid;
   grid-template-columns: 534px 506px;
-  gap: calc(var(--margin) / 2);
+  grid-template-areas:
+    'header  header'
+    'sidebar  sidebar'
+    'footer  footer';
+  gap: var(--margin) calc(var(--margin) / 2);
 }

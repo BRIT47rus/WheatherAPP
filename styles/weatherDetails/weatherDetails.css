@@ -4,6 +4,7 @@
 
 .weather__cards {
   display: grid;
+  grid-area: header;
   grid-template-columns: 158px 158px 158px;
   grid-template-rows: 196px 196px;
   gap: calc(var(--margin) / 2);

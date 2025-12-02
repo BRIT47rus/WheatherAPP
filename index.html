@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="/favicon-32x32.png" type="image/png" />
+    <link rel="icon" href="./favicon-32x32.png" type="image/png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
@@ -76,7 +76,39 @@
           <h2 class="screen-reader-only">Карточки погоды</h2>
           <ul class="weather__cards" id="weatherCards"></ul>
         </section>
+        <section class="weather__forecast" id="forecastSlider">
+          <div class="weather__forecast-header">
+            <h2 class="weather__forecast-header-title">Прогноз:</h2>
+            <button
+              class="weather__forecast-header-button active-button"
+              type="button"
+              data-forecast="today"
+            >
+              на 24 часа
+            </button>
+            <button class="weather__forecast-header-button" type="button" data-forecast="week">
+              на 5 дней
+            </button>
+          </div>
+          <div class="weather__forecast-slider">
+            <button class="slider__button" type="button">
+              <svg class="icon-slider">
+                <use href="./public/icons-sprite.svg#arrow" id="arrow"></use>
+              </svg>
+            </button>
+            <ul class="slider__list" id="slider__list"></ul>
+            <button class="slider__button" type="button">
+              <svg class="icon-slider">
+                <use href="./public/icons-sprite.svg#arrow" id="arrow"></use>
+              </svg>
+            </button>
+          </div>
+        </section>
       </main>
+      <footer class="footer">
+        Проект выполнен в рамках стажировки &nbsp;
+        <a href="https://preax.ru" target="_blank">PREAX</a>
+      </footer>
     </div>
   </body>
 </html>

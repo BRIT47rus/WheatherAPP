@@ -54,6 +54,41 @@ const initialState = [
     typeState: 'speed',
   },
 ];
+const futureWheather = {
+  today: [
+    { time: '12:00', icon: '../../public/images/weaterIcon/cloudly.svg', temperature: '-7' },
+    { time: '15:00', icon: '../../public/images/weaterIcon/cloudly.svg', temperature: '-5' },
+    { time: '18:00', icon: '../../public/images/weaterIcon/cloudly.svg', temperature: '-7' },
+    { time: '21:00', icon: '../../public/images/weaterIcon/cloudly.svg', temperature: '-9' },
+    { time: '00:00', icon: '../../public/images/weaterIcon/cloudly.svg', temperature: '-11' },
+    { time: '00:00', icon: '../../public/images/weaterIcon/cloudly.svg', temperature: '-11' },
+    { time: '00:00', icon: '../../public/images/weaterIcon/cloudly.svg', temperature: '-11' },
+    { time: '00:00', icon: '../../public/images/weaterIcon/cloudly.svg', temperature: '-11' },
+    { time: '00:00', icon: '../../public/images/weaterIcon/cloudly.svg', temperature: '-11' },
+  ],
+  week: [
+    {
+      time: 'Вс, 07 янв.',
+      icon: '../../public/images/weaterIcon/dayIcon/lowSunCloud.svg',
+      temperature: 'от -17° до -11',
+    },
+    {
+      time: 'Пн, 08 янв.',
+      icon: '../../public/images/weaterIcon/dayIcon/lowSunCloud.svg',
+      temperature: 'от -16° до -8',
+    },
+    {
+      time: 'Вт, 09 янв.',
+      icon: '../../public/images/weaterIcon/cloudly.svg',
+      temperature: 'от -8° до -2',
+    },
+    {
+      time: 'Ср, 10 янв.',
+      icon: '../../public/images/weaterIcon/cloudly.svg',
+      temperature: 'от -17° до -11',
+    },
+  ],
+};
 
 /**
  * @class
@@ -84,3 +119,4 @@ export class Store {
   }
 }
 export const store = new Store(initialState);
+export const forecastStore = new Store(futureWheather);

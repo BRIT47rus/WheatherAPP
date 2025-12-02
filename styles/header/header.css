@@ -14,6 +14,9 @@
   background: var(--bg-input);
   border-radius: var(--radius);
   transition: all 0.2s ease;
+  &:hover {
+    background: var(--bg-input-hover);
+  }
 }
 .header__search input {
   width: 434px;
@@ -21,9 +24,6 @@
   font-size: 20px;
   line-height: 24px;
 }
-.header__search:hover {
-  background: var(--bg-input-hover);
-}
-.header__search:focus-within {
+.header__search .header__search:focus-within {
   background: var(--bg-input-hover);
 }
