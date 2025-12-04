@@ -71,6 +71,7 @@
   margin-right: 16px;
   border-radius: var(--radius);
   background-color: var(--bg-opacity);
+  color: var(--color-font-slider-el);
   height: var(--slider-heigh);
   text-wrap: nowrap;
   gap: 16px;

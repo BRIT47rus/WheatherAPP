@@ -16,7 +16,9 @@ export class Forecast {
    */
   static createElement(db) {
     if (db) {
-      const spanTime = this.#createNode('span', 'slider__list-time', db.time);
+      const time = this.#createNode('time', null, db.time, null, [], { datetime: db.time });
+      const spanTime = this.#createNode('span', 'slider__list-time', null, null, [time]);
+
       const img = this.#createNode('img', '', '', db.icon);
       const spanTemperature = this.#createNode('span', 'slider__list-temperature', db.temperature);
       const arr = [spanTime, img, spanTemperature];
@@ -33,7 +35,7 @@ export class Forecast {
    * @param {string} src
    * @param {HTMLElement} children
    */
-  static #createNode(element, className = '', value = '', src = '', children) {
+  static #createNode(element, className = '', value = '', src = '', children = [], atributes = {}) {
     const node = document.createElement(element);
     if (className) {
       node.classList.add(className);
@@ -46,8 +48,13 @@ export class Forecast {
       node.setAttribute('width', 32);
       node.setAttribute('height', 32);
     }
-    if (children) {
+    if (children.length > 0) {
       node.append(...children);
+    }
+    if (atributes) {
+      for (let [key, value] of Object.entries(atributes)) {
+        node.setAttribute(key, value);
+      }
     }
     return node;
   }

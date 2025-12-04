@@ -4,6 +4,10 @@
   justify-content: space-between;
   align-items: center;
 }
+.header__logo {
+  display: flex;
+  padding-top: 4px;
+}
 
 .header__search {
   display: flex;
@@ -24,6 +28,7 @@
   font-size: 20px;
   line-height: 24px;
 }
+.has-text,
 .header__search .header__search:focus-within {
-  background: var(--bg-input-hover);
+  background-color: var(--bg-input-hover);
 }

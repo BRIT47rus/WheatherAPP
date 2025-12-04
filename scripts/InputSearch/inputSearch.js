@@ -1,4 +1,4 @@
-const pathSpriteSvg = '../../public/icons-sprite.svg';
+const pathSpriteSvg = './public/icons-sprite.svg';
 
 function handleSearchButtonClick(icon, event, input) {
   const currentIcon = icon.getAttribute('href').split(pathSpriteSvg)[1];
@@ -16,22 +16,28 @@ function handleSearchButtonClick(icon, event, input) {
   }
 }
 
-function changeValueSearchInput(event, inputBTN, icon) {
+function changeValueSearchInput(event, inputBTN, icon, input = null) {
   const value = event.target.value;
+  const par = document.getElementById('header__search');
 
   if (value.trim()) {
+    if (input) {
+      par.classList.add('has-text');
+    }
     inputBTN.setAttribute('aria-label', 'Очистить поле поиска');
     icon.setAttribute('href', pathSpriteSvg + '#iconClose');
     inputBTN.setAttribute('tabindex', '0');
     console.log(value);
   } else {
+    par.classList.remove('has-text');
     inputBTN.setAttribute('aria-label', 'Начать поиск');
     icon.setAttribute('href', pathSpriteSvg + '#iconSearch');
+    inputBTN.setAttribute('tabindex', '-1');
   }
 }
 
 export default function searchInputListener(input, inputBTN, icon) {
-  input.addEventListener('input', (event) => changeValueSearchInput(event, inputBTN, icon));
+  input.addEventListener('input', (event) => changeValueSearchInput(event, inputBTN, icon, input));
 
   inputBTN.addEventListener('click', (event) => handleSearchButtonClick(icon, event, input));
 }
