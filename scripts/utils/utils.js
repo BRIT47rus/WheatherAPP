@@ -11,8 +11,10 @@ export const handleForecastTodayOrWeek = (event, container, listContainer, forec
   if (!dataCategory || target.tagName !== 'BUTTON') {
     return;
   }
+
   if (dataCategory === 'today') {
     target.classList.add('active-button');
+
     const weekButton = container.querySelector("[data-forecast='week']");
     typeDataForecast = 'today';
     listContainer.innerHTML = '';
@@ -22,6 +24,7 @@ export const handleForecastTodayOrWeek = (event, container, listContainer, forec
     }
   } else if (dataCategory === 'week') {
     target.classList.add('active-button');
+
     const todayButton = container.querySelector("[data-forecast='today']");
     typeDataForecast = 'week';
     listContainer.innerHTML = '';

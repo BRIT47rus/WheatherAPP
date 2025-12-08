@@ -8,8 +8,6 @@
  * @class
  */
 export class Forecast {
-  constructor() {}
-
   /**
    * @method
    * @param {ForecastDB} db

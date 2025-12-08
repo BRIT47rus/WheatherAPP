@@ -71,6 +71,14 @@ export class Card {
       case 'distance': {
         const isBarometr = data.typeState === 'barometr';
         const barElement = this.#createBarElement(isBarometr);
+        const thumb = barElement.querySelector('.thumb');
+        let possitionThumb = data.value;
+        if (data.typeState == 'barometr') {
+          possitionThumb = possitionThumb / 10;
+        }
+        if (thumb) {
+          thumb.style.left = `${possitionThumb}%`;
+        }
         contentElement.appendChild(barElement);
         contentElement.appendChild(stateElement);
         break;
@@ -81,7 +89,8 @@ export class Card {
         const percentDiv = this.#createNode('div', 'weather__card-percent');
         const spanPercntLeft = this.#createNode('span', '', '0%');
         const spanPercntRight = this.#createNode('span', '', '100%');
-
+        const thumb = barPercent.querySelector('.thumb');
+        thumb.style.left = `${data.value}%`;
         percentDiv.appendChild(spanPercntLeft);
         percentDiv.appendChild(spanPercntRight);
 

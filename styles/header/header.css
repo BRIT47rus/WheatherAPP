@@ -8,7 +8,9 @@
   display: flex;
   padding-top: 4px;
 }
-
+.header__logo:focus-visible {
+  outline: 2px var(--color-accesability) solid;
+}
 .header__search {
   display: flex;
   justify-content: space-between;
@@ -18,9 +20,9 @@
   background: var(--bg-input);
   border-radius: var(--radius);
   transition: all 0.2s ease;
-  &:hover {
-    background: var(--bg-input-hover);
-  }
+}
+.header__search:hover {
+  background: var(--bg-input-hover);
 }
 .header__search input {
   width: 434px;
@@ -31,4 +33,10 @@
 .has-text,
 .header__search .header__search:focus-within {
   background-color: var(--bg-input-hover);
+}
+.header__search .icon {
+  color: #545454;
+}
+.header__search .icon:hover {
+  color: #202020;
 }

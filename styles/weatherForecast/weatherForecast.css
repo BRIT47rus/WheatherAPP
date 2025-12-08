@@ -35,3 +35,6 @@
 .weather__forecast-header-button.active-button {
   pointer-events: none;
 }
+.weather__forecast-header-button:focus-visible:not(:has(.active-button:focus-visible)) {
+  outline: 2px var(--color-accesability) solid;
+}

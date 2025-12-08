@@ -74,5 +74,6 @@
   color: var(--color-font-slider-el);
   height: var(--slider-heigh);
   text-wrap: nowrap;
+  white-space: nowrap;
   gap: 16px;
 }

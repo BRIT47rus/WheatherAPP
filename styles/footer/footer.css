@@ -8,10 +8,19 @@
   font-weight: 400;
   font-size: 16px;
   color: var(--color-font);
-  & a {
-    color: var(--color-font);
-    text-decoration: none;
-    height: 20px;
-    border-bottom: 1px solid var(--color-font);
-  }
+}
+.footer a {
+  color: var(--color-font);
+  text-decoration: none;
+  height: 20px;
+  border-bottom: 1px solid var(--color-font);
+}
+.footer a:focus-visible {
+  outline: 2px var(--color-accesability) solid;
+}
+.slider__button[disabled] {
+  pointer-events: none;
+}
+.slider__button:focus-visible {
+  outline: 2px var(--color-accesability) solid;
 }

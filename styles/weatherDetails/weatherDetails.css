@@ -100,7 +100,7 @@
 
 .thumb {
   position: relative;
-  left: 77%;
+  /* left: 77%; */
   border-radius: 50%;
   width: var(--thumb-size);
   height: var(--thumb-size);
