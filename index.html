@@ -26,12 +26,26 @@
     <div class="container">
       <header class="header full-width-padd">
         <a href="#" class="header__logo" tabindex="0">
-          <img
-            src="./public/images/logo.svg"
-            alt="Логотип приложения WeatherApp"
-            width="192"
-            height="48"
-          />
+          <picture>
+            <source
+              media="(min-width:886px )"
+              srcset="./public/images/logo.svg"
+              width="192"
+              height="48"
+            />
+            <source
+              media="(max-width:886px )"
+              srcset="./public/images/tablet.svg"
+              width="54"
+              height="48"
+            />
+            <img
+              src="./public/images/tablet.svg"
+              alt="Логотип приложения WeatherApp"
+              width="32"
+              height="32"
+            />
+          </picture>
         </a>
         <form class="header__search" id="header__search">
           <input
@@ -52,7 +66,7 @@
       <main class="weather full-width-padd">
         <section class="weather__today">
           <h1 class="screen-reader-only">Информация погоды на сегодня</h1>
-          <div>
+          <div class="weather__today-place">
             <h2 class="weather__today-title">Москва</h2>
             <time class="weather__today-date" datetime="2025-01-06">Суббота, 06 января</time><br />
             <time class="weather__today-time" datetime="11:29">11:29</time>
@@ -60,7 +74,7 @@
           <div>
             <span class="weather__today-temperature temperature">-7</span>
           </div>
-          <div>
+          <div class="weather__today-sence">
             <p class="weather__today-info">
               <img
                 src="./public/images/weaterIcon/cloudly.svg"

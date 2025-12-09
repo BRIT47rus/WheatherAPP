@@ -1,6 +1,5 @@
 .weather__forecast-slider {
   position: relative;
-  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -12,11 +11,10 @@
 .slider__button {
   position: relative;
   min-width: 56px;
-  width: 56px;
   height: 48px;
   background: var(--bg-opacity);
   border-radius: var(--radius);
-  line-height: 20px;
+  line-height: var(--font-size-x);
   cursor: pointer;
   color: rgba(84, 84, 84, 1);
   transition: color 0.3s ease, background-color 0.3s ease;
@@ -68,12 +66,104 @@
   align-items: center;
   justify-content: space-between;
   padding: 22px 16px;
-  margin-right: 16px;
+  margin-right: calc(var(--margin) / 2);
   border-radius: var(--radius);
   background-color: var(--bg-opacity);
   color: var(--color-font-slider-el);
   height: var(--slider-heigh);
   text-wrap: nowrap;
   white-space: nowrap;
-  gap: 16px;
+}
+@media (min-width: 886px) {
+  .slider__list-element *:not(:last-child) {
+    margin-right: 16px;
+  }
+}
+
+@media (max-width: 886px) {
+  .slider__list {
+    width: 630px;
+    margin: 0 24px;
+  }
+  .slider__list-element *:not(:last-child) {
+    margin-right: 16px;
+  }
+}
+@media (max-width: 768px) {
+  .slider__list-element {
+    flex-direction: column;
+    padding: 16px 16px;
+  }
+  .slider__list {
+    width: 512px;
+  }
+  .weather__forecast-slider {
+    margin-top: -12px;
+  }
+  .slider__list-element {
+    flex-direction: column;
+    width: 100%;
+    height: 136px;
+    padding: 12px 16px;
+    font-size: var(--font-size-m);
+  }
+  .slider__list-element *:not(:last-child) {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .slider__list {
+    width: 464px;
+    margin: 0 16px;
+  }
+  .slider__button {
+    min-width: 40px;
+    height: 32px;
+  }
+  .slider__list-element {
+    flex-direction: row;
+    height: 48px;
+    width: 100%;
+    padding: 12px 16px;
+    font-size: var(--font-size-m);
+  }
+
+  .slider__list-element *:not(:last-child) {
+    margin-right: 12px;
+  }
+}
+@media (max-width: 375px) {
+  .slider__list {
+    width: 199px;
+  }
+  .slider__list-element {
+    flex-direction: column;
+    align-items: center;
+    width: 98px;
+    height: 104px;
+    padding: 12px;
+    font-size: var(--font-size-m);
+    line-height: var(--font-size-m);
+  }
+
+  .slider__list-element *:not(:last-child) {
+    margin-right: 0;
+  }
+  .slider__list-element img {
+    width: 24px;
+    height: 24px;
+  }
+  .slider__button {
+    min-width: 40px;
+    height: 32px;
+  }
+
+  .icon-slider {
+    width: 6px;
+    height: 16px;
+  }
+  .weather__forecast-slider {
+    max-width: 311px;
+  }
 }

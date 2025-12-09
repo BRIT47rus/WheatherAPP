@@ -3,10 +3,10 @@
   display: flex;
   grid-area: footer;
   justify-content: center;
-  margin-top: -32px;
-  padding-bottom: 32px;
+  margin-top: -26px;
+  padding-bottom: var(--margin);
   font-weight: 400;
-  font-size: 16px;
+  font-size: var(--font-size-m);
   color: var(--color-font);
 }
 .footer a {
@@ -23,4 +23,25 @@
 }
 .slider__button:focus-visible {
   outline: 2px var(--color-accesability) solid;
+}
+
+@media (max-width: 886px) {
+  .footer {
+    margin-top: -48px;
+  }
+}
+@media (max-width: 768px) {
+  .footer {
+    margin-top: -64px;
+  }
+}
+@media (max-width: 640px) {
+  .footer {
+    margin-top: -54px;
+  }
+}
+@media (max-width: 375px) {
+  .footer {
+    margin-top: -52px;
+  }
 }

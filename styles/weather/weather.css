@@ -5,5 +5,30 @@
     'header  header'
     'sidebar  sidebar'
     'footer  footer';
-  gap: var(--margin) calc(var(--margin) / 2);
+  gap: 26px calc(var(--margin) / 2);
+  justify-content: center;
+}
+
+@media (max-width: 886px) {
+  .weather {
+    grid-template-columns: 100%;
+    grid-template-areas:
+      'header '
+      'header'
+      'sidebar '
+      'footer ';
+    gap: 48px;
+  }
+}
+
+@media (max-width: 640px) {
+  .weather {
+    gap: 32px;
+  }
+}
+@media (max-width: 375px) {
+  .weather {
+    grid-template-columns: 100%;
+    gap: 32px;
+  }
 }

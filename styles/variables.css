@@ -25,6 +25,48 @@
   --button-color-active: var(--color-font-main);
 
   --margin: 32px;
+  --gap: 16px;
   --radius: 8px;
   --opacity: 0.5;
+  --font-size-xl: 24px;
+  --font-size-x: 20px;
+  --font-size-m: 16px;
+  --font-size-l: 12px;
+  --slider-heigh: 64px;
+}
+@media (min-width: 886px) {
+  body {
+    min-width: 1280px;
+    overflow-x: scroll;
+  }
+}
+
+@media (max-width: 886px) {
+  body {
+    --font-size-xl: 24px;
+    --font-size-x: 20px;
+    --font-size-m: 16px;
+    --font-size-l: 12px;
+    --margin: 24px;
+  }
+}
+@media (max-width: 768px) {
+  body {
+    --slider-heigh: 136px;
+  }
+}
+@media (max-width: 640px) {
+  body {
+    --font-size-xl: 16px;
+    --font-size-x: 14px;
+    --font-size-m: 12px;
+    --font-size-l: 10px;
+    --margin: 16px;
+    --slider-heigh: 48px;
+  }
+}
+@media (max-width: 375px) {
+  body {
+    --slider-heigh: 104px;
+  }
 }

@@ -1,39 +1,101 @@
 .weather__today {
   display: flex;
-
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   text-align: center;
-  font-size: 20px;
-  min-height: 408px;
-  padding: calc(var(--margin) / 4);
+  font-size: var(--font-size-x);
+  height: 408px;
+}
+.weather__today-place {
+  line-height: 34px;
+}
+.weather__today-sence {
+  line-height: 48px;
 }
 
 .weather__today-title {
   font-weight: 700;
-  font-size: 24px;
-  line-height: 32px;
+  font-size: var(--font-size-xl);
 }
 .weather__today-date {
-  line-height: 40px;
+  line-height: var(--font-size-xl);
 }
 
 .weather__today-temperature {
+  --size: 112px;
   display: flex;
   text-align: center;
   font-weight: 700;
-  font-size: 112px;
-  line-height: 122px;
-  height: 112px;
+  font-size: var(--size);
+  line-height: var(--size);
+  height: var(--size);
 }
 
 .weather__today-info {
   display: flex;
   align-items: center;
   justify-content: center;
-  line-height: 40px;
+  line-height: var(--font-size-xl);
 }
 .weather__today-info span {
-  margin-left: 8px;
+  margin-left: calc(var(--margin) / 4);
+}
+@media (min-width: 886px) {
+}
+
+@media (max-width: 886px) {
+  .weather__today {
+    height: 306px;
+  }
+  .weather__today-place {
+    line-height: 30px;
+  }
+
+  .weather__today-sence {
+    line-height: 36px;
+  }
+}
+@media (max-width: 768px) {
+  .weather__today-place {
+    line-height: 34px;
+  }
+  .weather__today-temperature {
+    line-height: 108px;
+  }
+  .weather__today-sence {
+    line-height: 36px;
+  }
+}
+@media (max-width: 640px) {
+  .weather__today-temperature {
+    --size: 56px;
+    line-height: 58px;
+  }
+  .weather__today {
+    height: 184px;
+  }
+  .weather__today-place {
+    line-height: 18px;
+  }
+
+  .weather__today-sence {
+    line-height: 26px;
+  }
+}
+@media (max-width: 375px) {
+  .weather__today-temperature {
+    --size: 56px;
+    line-height: 56px;
+  }
+  .weather__today {
+    height: 184px;
+  }
+  .weather__today-place {
+    line-height: 21px;
+  }
+
+  .weather__today-sence {
+    line-height: 16px;
+  }
 }
