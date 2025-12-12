@@ -1,6 +1,7 @@
 .weather {
   display: grid;
-  grid-template-columns: 534px 506px;
+  grid-template-columns: 1fr 1fr;
+
   grid-template-areas:
     'header  header'
     'sidebar  sidebar'
@@ -8,8 +9,8 @@
   gap: 26px calc(var(--margin) / 2);
   justify-content: center;
 }
-
-@media (max-width: 886px) {
+/* 886px */
+@media (max-width: 1023px) {
   .weather {
     grid-template-columns: 100%;
     grid-template-areas:

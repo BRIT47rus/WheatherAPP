@@ -150,6 +150,9 @@
 }
 
 @media (max-width: 886px) {
+  .weather__cards {
+    --size-card-w: 163px;
+  }
 }
 @media (max-width: 768px) {
   .weather__details {

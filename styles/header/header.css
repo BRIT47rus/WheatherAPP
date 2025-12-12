@@ -6,7 +6,6 @@
 .header__logo {
   display: flex;
   justify-content: center;
-  align-items: center;
   margin-right: 16px;
 }
 .header__logo:focus-visible {
