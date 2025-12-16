@@ -6,96 +6,154 @@
   text-align: center;
   font-size: var(--font-size-x);
   height: 408px;
+  gap: 48px;
+  padding: 4px 8px 8px;
 }
 .weather__today-place {
-  line-height: 34px;
-}
-.weather__today-sence {
-  line-height: 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
 }
 
 .weather__today-title {
   font-weight: 700;
   font-size: var(--font-size-xl);
 }
-.weather__today-date {
-  line-height: var(--font-size-xl);
-}
 
+.weather__today-temperature-wrapp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .weather__today-temperature {
   --size: 112px;
   display: flex;
   text-align: center;
   font-weight: 700;
   font-size: var(--size);
-  line-height: var(--size);
-  height: var(--size);
 }
 
 .weather__today-info {
   display: flex;
   align-items: center;
   justify-content: center;
-  line-height: var(--font-size-xl);
 }
 .weather__today-info span {
   margin-left: calc(var(--margin) / 4);
 }
-@media (min-width: 886px) {
+@media (min-width: 1279px) {
+  .weather__today {
+    width: 534px;
+  }
+  .weather__today-temperature-wrapp {
+    height: 112px;
+  }
 }
-
-@media (max-width: 886px) {
+@media (max-width: 1279px) {
+  .weather__today-place {
+    height: 128px;
+    /* gap: 9px; */
+  }
+  /* /--------- */
+  /* .weather__today-title {
+    line-height: 32px;
+  }
+  .weather__today {
+    line-height: 24px;
+  }
+  .weather__today-temperature-wrapp {
+    line-height: 112px;
+  } */
+}
+@media (min-width: 1024px) {
+  .weather__today {
+    height: 408px;
+    gap: 48px;
+    padding: 8px;
+    line-height: 24px;
+  }
+  .weather__today-place {
+    height: 128px;
+    gap: 8px;
+  }
+  .weather__today-sence {
+    height: 56px;
+    line-height: 29px;
+  }
+  .weather__today-temperature-wrapp {
+    line-height: 112px;
+  }
+  .weather__today-title {
+    line-height: 32px;
+  }
+}
+@media (min-width: 1280px) {
+  .weather__today {
+    gap: 64px;
+  }
+}
+@media (max-width: 1023px) {
+  .weather__today-place {
+    height: 92px;
+    gap: 8px;
+  }
   .weather__today {
     height: 306px;
-  }
-  .weather__today-place {
-    line-height: 30px;
+    gap: 24px;
+    padding: 4px 8px;
   }
 
   .weather__today-sence {
-    line-height: 36px;
+    height: 54px;
   }
 }
-@media (max-width: 768px) {
-  .weather__today-place {
-    line-height: 34px;
+@media (max-width: 886px) {
+  .weather__today {
+    line-height: 24px;
+    padding: 2px 8px;
   }
-  .weather__today-temperature {
-    line-height: 108px;
+  .weather__today-temperature-wrapp {
+    line-height: 112px;
+  }
+  .weather__today-title {
+    line-height: 32px;
+  }
+  .weather__today-place {
+    gap: 6px;
   }
   .weather__today-sence {
-    line-height: 36px;
+    line-height: 27px;
   }
 }
+
 @media (max-width: 640px) {
   .weather__today-temperature {
     --size: 56px;
-    line-height: 58px;
+  }
+  .weather__today-title {
+    line-height: 20px;
   }
   .weather__today {
     height: 184px;
+    gap: 14px;
+    padding: 0px 8px;
+    line-height: 16px;
+  }
+  .weather__today-temperature-wrapp {
+    line-height: 52px;
   }
   .weather__today-place {
-    line-height: 18px;
+    gap: 4px;
   }
-
   .weather__today-sence {
-    line-height: 26px;
+    line-height: 16px;
   }
 }
 @media (max-width: 375px) {
   .weather__today-temperature {
     --size: 56px;
-    line-height: 56px;
   }
   .weather__today {
     height: 184px;
-  }
-  .weather__today-place {
-    line-height: 21px;
-  }
-
-  .weather__today-sence {
-    line-height: 16px;
   }
 }

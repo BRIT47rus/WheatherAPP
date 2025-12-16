@@ -1,4 +1,4 @@
-import { Forecast } from '../Forecast/Forecast.js';
+import { Forecast } from '../forecast/forecast.js';
 
 let typeDataForecast = 'today';
 

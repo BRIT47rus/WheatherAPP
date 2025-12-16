@@ -31,6 +31,8 @@ body {
   backdrop-filter: blur(25px);
   border-radius: var(--radius);
   min-width: 1120px;
+  width: 1120px;
+  height: 860px;
 }
 .full-width-padd {
   width: 100%;
@@ -64,12 +66,21 @@ body {
 @media (max-width: 1279px) {
   .container {
     min-width: 822px;
-    max-width: 1120px;
+    width: 1120px;
   }
 }
 @media (min-width: 1024px) {
   .container {
+    max-width: 1120px;
     min-width: 960px;
+  }
+  .full-width-padd {
+    padding: 32px;
+  }
+}
+@media (max-width: 1023px) {
+  .container {
+    height: 100%;
   }
 }
 

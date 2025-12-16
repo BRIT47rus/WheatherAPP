@@ -1,4 +1,4 @@
-import { Card } from './scripts/Card/Card.js';
+import { Card } from './scripts/card/card.js';
 import searchInputListener from './scripts/InputSearch/inputSearch.js';
 import { forecastStore, store } from './scripts/store/store.js';
 import { handleForecastTodayOrWeek, renderForecast } from './scripts/utils/utils.js';

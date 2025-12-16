@@ -2,19 +2,16 @@
   display: grid;
   grid-area: sidebar;
   height: 192px;
-  padding: var(--margin) 0;
-  gap: var(--margin);
 }
 .weather__forecast-header {
   display: flex;
   height: 32px;
   gap: var(--margin);
   font-weight: 700;
-  align-items: flex-end;
+  align-items: center;
 }
 .weather__forecast-header-title {
   font-size: var(--font-size-xl);
-  line-height: 32px;
 }
 
 .weather__forecast-header-button {
@@ -38,14 +35,24 @@
 .weather__forecast-header-button:focus-visible:not(:has(.active-button:focus-visible)) {
   outline: 2px var(--color-accesability) solid;
 }
-@media (min-width: 886px) {
+@media (min-width: 1024px) {
+  .weather__forecast {
+    margin-top: 37px;
+    height: 162px;
+  }
+  .weather__forecast-header-button {
+    margin-top: 8px;
+  }
 }
-
-@media (max-width: 886px) {
+@media (max-width: 1023px) {
   .weather__forecast {
     height: 146px;
-    padding: 0;
-    gap: 0;
+  }
+  .weather__forecast-header-button {
+    margin-top: 8px;
+  }
+  .weather__forecast-header {
+    height: 32px;
   }
 }
 @media (max-width: 768px) {
@@ -60,29 +67,19 @@
     height: 116px;
   }
   .weather__forecast-header {
-    height: 28px;
-    line-height: 34px;
+    height: 22px;
   }
-  .weather__forecast-slider {
-    margin-top: -25px;
+  .weather__forecast-header-button {
+    margin-top: 0;
   }
 }
 @media (max-width: 375px) {
   .weather__forecast {
-    width: 343px;
     height: 174px;
   }
-  .weather__forecast-header {
-    height: 14px !important;
-  }
+
   .weather__forecast-header-button {
-    height: 20px;
+    height: 24px;
     text-align: center;
-  }
-  .weather__forecast-header-title {
-    line-height: 8px !important;
-  }
-  .weather__forecast-slider {
-    margin-top: -9px !important;
   }
 }

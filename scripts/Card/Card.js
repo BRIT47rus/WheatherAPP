@@ -8,6 +8,8 @@
  * @property {string} state - может быть пустым
  * @property {('percent'|'barometr'|'distance'|'time'|'speed')} typeState
  * @property {string} label
+ * @property {number} minValue
+ * @property {number} maxValue
  */
 
 /**
@@ -66,18 +68,26 @@ export class Card {
     const contentElement = this.#createNode('div', 'wheater__card-content');
     const stateElement = this.#createNode('div', 'weather__card-state', data.state);
 
+    let positionPercent = 0;
+    if (data.typeState) {
+      let possitionThumb = data.value;
+      if (data.maxValue > data.minValue) {
+        const valueRange = possitionThumb - data.minValue;
+        const totalRange = data.maxValue - data.minValue;
+        positionPercent = (valueRange / totalRange) * 100;
+      }
+      positionPercent = Math.max(0, Math.min(100, positionPercent));
+    }
+
     switch (data.typeState) {
       case 'barometr':
       case 'distance': {
         const isBarometr = data.typeState === 'barometr';
         const barElement = this.#createBarElement(isBarometr);
         const thumb = barElement.querySelector('.thumb');
-        let possitionThumb = data.value;
-        if (data.typeState == 'barometr') {
-          possitionThumb = possitionThumb / 10;
-        }
+
         if (thumb) {
-          thumb.style.left = `${possitionThumb}%`;
+          thumb.style.left = `${positionPercent}%`;
         }
         contentElement.appendChild(barElement);
         contentElement.appendChild(stateElement);
@@ -90,7 +100,7 @@ export class Card {
         const spanPercntLeft = this.#createNode('span', '', '0%');
         const spanPercntRight = this.#createNode('span', '', '100%');
         const thumb = barPercent.querySelector('.thumb');
-        thumb.style.left = `${data.value}%`;
+        thumb.style.left = `${positionPercent}%`;
         percentDiv.appendChild(spanPercntLeft);
         percentDiv.appendChild(spanPercntRight);
 

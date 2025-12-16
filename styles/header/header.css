@@ -40,7 +40,16 @@
 .header__search .icon:hover {
   color: #202020;
 }
-
+@media (min-width: 1024px) {
+  .header {
+    height: 112px;
+  }
+}
+@media (max-width: 1023px) {
+  .header {
+    height: 96px;
+  }
+}
 @media (max-width: 886px) {
   .header__search {
     width: 601px;
@@ -50,11 +59,11 @@
   .header__search {
     width: 483px;
   }
-  .header {
-    height: 96px;
-  }
 }
 @media (max-width: 640px) {
+  .header {
+    height: 64px;
+  }
   .header__search {
     width: 409px;
     min-width: 263px;

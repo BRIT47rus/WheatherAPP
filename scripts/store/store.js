@@ -7,6 +7,8 @@ const initialState = [
     state: '',
     label: '%',
     typeState: 'percent',
+    minValue: 0,
+    maxValue: 100,
   },
   {
     id: '2',
@@ -16,6 +18,8 @@ const initialState = [
     state: 'Повышенное',
     label: '',
     typeState: 'barometr',
+    minValue: 600,
+    maxValue: 812,
   },
   {
     id: '3',
@@ -25,6 +29,8 @@ const initialState = [
     state: 'Нормальная',
     label: 'км',
     typeState: 'distance',
+    minValue: 0,
+    maxValue: 100,
   },
   {
     id: '4',
