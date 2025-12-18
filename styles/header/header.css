@@ -3,10 +3,32 @@
   display: flex;
   justify-content: space-between;
 }
+
+@media (width >= 1024px) {
+  .header {
+    height: 112px;
+  }
+}
+@media (width < 886px) {
+  .header {
+    height: 96px;
+  }
+}
+@media (width < 640px) {
+  .header {
+    height: 64px;
+  }
+}
+
 .header__logo {
   display: flex;
   justify-content: center;
-  margin-right: 16px;
+}
+@media (width < 640px) {
+  .header__logo img {
+    width: 32px;
+    height: 32px;
+  }
 }
 .header__logo:focus-visible {
   outline: 2px var(--color-accesability) solid;
@@ -21,6 +43,43 @@
   border-radius: var(--radius);
   transition: all 0.2s ease;
 }
+@media (width >= 1024px) {
+  .header__search {
+    margin-left: 0;
+  }
+}
+@media (width < 1024px) {
+  .header__search {
+    width: 100%;
+    margin-left: 135px;
+  }
+}
+
+@media (width <= 768px) {
+  .header__search {
+    width: 483px;
+  }
+}
+@media (width < 640px) {
+  .header__search {
+    width: 409px;
+    min-width: 263px;
+    height: 32px;
+    padding: 8px 12px;
+  }
+}
+
+@media (width <480px) {
+  .header__search {
+    margin-left: 16px;
+  }
+}
+@media (width <= 375px) {
+  .header__search {
+    width: 409px;
+    margin-left: 16px;
+  }
+}
 
 .header__search:hover {
   background: var(--bg-input-hover);
@@ -29,6 +88,7 @@
   color: var(--color-input-typing);
   font-size: var(--font-size-x);
   line-height: 24px;
+  width: 100%;
 }
 .has-text,
 .header__search .header__search:focus-within {
@@ -37,49 +97,10 @@
 .header__search .icon {
   color: #545454;
 }
+.header__search :focus-visible {
+  outline: 2px var(--color-accesability) solid;
+}
+
 .header__search .icon:hover {
   color: #202020;
-}
-@media (min-width: 1024px) {
-  .header {
-    height: 112px;
-  }
-}
-@media (max-width: 1023px) {
-  .header {
-    height: 96px;
-  }
-}
-@media (max-width: 886px) {
-  .header__search {
-    width: 601px;
-  }
-}
-@media (max-width: 768px) {
-  .header__search {
-    width: 483px;
-  }
-}
-@media (max-width: 640px) {
-  .header {
-    height: 64px;
-  }
-  .header__search {
-    width: 409px;
-    min-width: 263px;
-    height: 32px;
-    padding: 8px 12px;
-  }
-  .header__logo img {
-    width: 32px;
-    height: 32px;
-  }
-}
-@media (max-width: 375px) {
-  .header__search {
-    width: 409px;
-  }
-  .header {
-    height: 64px;
-  }
 }

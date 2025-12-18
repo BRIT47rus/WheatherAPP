@@ -25,7 +25,7 @@ const initialState = [
     id: '3',
     title: 'Видимость',
     icon: './public/images/detailsIcons/visibility.svg',
-    value: '28',
+    value: '100',
     state: 'Нормальная',
     label: 'км',
     typeState: 'distance',

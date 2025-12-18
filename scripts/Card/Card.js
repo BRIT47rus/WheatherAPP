@@ -28,6 +28,10 @@ export class Card {
     li.appendChild(h3);
     const image = this.#createNode('img', 'icon-weather');
     image.setAttribute('src', data.icon);
+    image.setAttribute(
+      'alt',
+      data.title + ' ' + data.value + data.label + ' ' + (data.state.length > 0 ? data.state : ' ')
+    );
     li.appendChild(image);
     const paragrafValue = this.#createNode('p', 'weather__card-value', data.value, data.label);
     li.appendChild(paragrafValue);
@@ -69,14 +73,18 @@ export class Card {
     const stateElement = this.#createNode('div', 'weather__card-state', data.state);
 
     let positionPercent = 0;
-    if (data.typeState) {
-      let possitionThumb = data.value;
-      if (data.maxValue > data.minValue) {
+    if (data.typeState !== 'time' && data.typeState !== 'speed') {
+      let possitionThumb = Number(data.value);
+      const { value, minValue, maxValue } = data;
+
+      if (maxValue > minValue && Boolean(value)) {
         const valueRange = possitionThumb - data.minValue;
-        const totalRange = data.maxValue - data.minValue;
+        console.log(valueRange);
+        const totalRange = maxValue - minValue;
         positionPercent = (valueRange / totalRange) * 100;
+        positionPercent = Math.max(0, Math.min(100, positionPercent));
+        console.log(positionPercent);
       }
-      positionPercent = Math.max(0, Math.min(100, positionPercent));
     }
 
     switch (data.typeState) {
@@ -99,8 +107,11 @@ export class Card {
         const percentDiv = this.#createNode('div', 'weather__card-percent');
         const spanPercntLeft = this.#createNode('span', '', '0%');
         const spanPercntRight = this.#createNode('span', '', '100%');
+
         const thumb = barPercent.querySelector('.thumb');
-        thumb.style.left = `${positionPercent}%`;
+        if (thumb) {
+          thumb.style.left = `${positionPercent}%`;
+        }
         percentDiv.appendChild(spanPercntLeft);
         percentDiv.appendChild(spanPercntRight);
 

@@ -1,20 +1,26 @@
 .footer {
   --color-font: rgba(245, 244, 244, 0.8);
   display: flex;
-  padding: 24px;
   justify-content: center;
-  margin-top: -26px;
+  align-items: flex-start;
   padding-bottom: var(--margin);
   font-weight: 400;
   font-size: var(--font-size-m);
   color: var(--color-font);
 }
+
+@media (width < 640px) {
+  .footer {
+    line-height: 16px;
+  }
+}
+
 .footer a {
   color: var(--color-font);
   text-decoration: none;
-  height: 20px;
-  border-bottom: 1px solid var(--color-font);
+  text-decoration: underline;
 }
+
 .footer a:focus-visible {
   outline: 2px var(--color-accesability) solid;
 }
@@ -23,20 +29,4 @@
 }
 .slider__button:focus-visible {
   outline: 2px var(--color-accesability) solid;
-}
-@media (max-width: 886px) {
-  .footer {
-    margin-top: -26px;
-  }
-}
-@media (max-width: 768px) {
-  .footer {
-    margin-top: -42px;
-  }
-}
-
-@media (max-width: 640px) {
-  .footer {
-    margin-top: -44px;
-  }
 }

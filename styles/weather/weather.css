@@ -9,7 +9,12 @@
   justify-content: center;
 }
 
-@media (max-width: 1023px) {
+@media (width>= 1023px) {
+  .weather {
+    gap: 64px calc(var(--margin) / 2);
+  }
+}
+@media (width< 1024px) {
   .weather {
     grid-template-columns: 1fr;
     grid-template-rows: 306px 404px auto;
@@ -20,25 +25,15 @@
     gap: 48px;
   }
 }
-@media (min-height: 1023px) {
-  .weather {
-    gap: 32px;
-  }
-}
 
-@media (max-width: 640px) {
+@media (width < 640px) {
   .weather {
     gap: 32px;
     grid-template-rows: 184px 304px auto;
   }
 }
-@media (max-width: 375px) {
-  .weather {
-    grid-template-columns: 100%;
-    gap: 32px;
-  }
-}
-@media (max-width: 320px) {
+
+@media (width<= 320px) {
   .weather {
     gap: 8px;
     grid-template-rows: 184px 462px auto;

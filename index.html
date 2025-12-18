@@ -10,26 +10,24 @@
     <link
       rel="preload"
       as="style"
-      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      href=" https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap"
     />
 
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      href=" https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap"
     />
     <link rel="stylesheet" href="./style.css" />
     <title>WeatherApp</title>
   </head>
   <body>
-    <script src="./script.js" defer type="module"></script>
-
     <div class="container">
       <header class="header full-width-padd">
         <a href="#" class="header__logo" tabindex="0">
           <picture>
             <source
               media="(min-width:1024px )"
-              srcset="./public/images/logo.svg"
+              srcset="./public/images/desktop.png"
               width="192"
               height="48"
             />
@@ -68,7 +66,7 @@
         <section class="weather__today">
           <h1 class="screen-reader-only">Информация погоды на сегодня</h1>
           <div class="weather__today-place">
-            <h2 class="weather__today-title">Москва</h2>
+            <h2 class="weather__today-title">Кременчуг-константиновское</h2>
             <time class="weather__today-date" datetime="2025-01-06">Суббота, 06 января</time>
             <time class="weather__today-time" datetime="11:29">11:29</time>
           </div>
@@ -121,10 +119,11 @@
           </div>
         </section>
       </main>
-      <footer class="footer">
-        Проект выполнен в рамках стажировки &nbsp;
-        <a href="https://preax.ru" target="_blank" rel="noopener noofferer">PREAX</a>
+      <footer class="footer full-width-padd">
+        <span>Проект выполнен в рамках стажировки &nbsp;</span>
+        <a href="https://preax.ru" target="_blank" rel="noopener nooferrer">PREAX</a>
       </footer>
     </div>
   </body>
+  <script src="./script.js" type="module"></script>
 </html>

@@ -18,6 +18,7 @@ export class Forecast {
       const spanTime = this.#createNode('span', 'slider__list-time', null, null, [time]);
 
       const img = this.#createNode('img', '', '', db.icon);
+      img.setAttribute('alt', 'температура ' + db.temperature);
       const spanTemperature = this.#createNode('span', 'slider__list-temperature', db.temperature);
       const arr = [spanTime, img, spanTemperature];
       const li = this.#createNode('li', 'slider__list-element', '', '', arr);

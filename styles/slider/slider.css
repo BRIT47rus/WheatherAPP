@@ -8,24 +8,43 @@
   background-color: transparent;
 }
 
+@media (width <= 375px) {
+  .weather__forecast-slider {
+    max-width: 311px;
+  }
+}
+
 .slider__button {
   position: relative;
   min-width: 56px;
   height: 48px;
-  background: var(--bg-opacity);
+  background: var(--button-bg);
+  opacity: 0.5;
   border-radius: var(--radius);
   line-height: var(--font-size-x);
   cursor: pointer;
   color: rgba(84, 84, 84, 1);
-  transition: color 0.3s ease, background-color 0.3s ease;
+  transition: opacity 0.3s ease;
 
   &:hover {
-    background-color: #dadada;
+    opacity: 1;
   }
 }
 .slider__button:disabled {
   pointer-events: none;
   cursor: not-allowed;
+}
+@media (width <= 640px) {
+  .slider__button {
+    min-width: 40px;
+    height: 32px;
+  }
+}
+@media (width <= 375px) {
+  .slider__button {
+    min-width: 40px;
+    height: 32px;
+  }
 }
 
 .weather__forecast-slider .slider__button:last-child {
@@ -40,6 +59,12 @@
   left: 50%;
   z-index: 1;
   transform: translate(-50%, -50%);
+}
+@media (width <= 375px) {
+  .icon-slider {
+    width: 6px;
+    height: 16px;
+  }
 }
 
 .slider__button:last-child .icon-slider {
@@ -67,7 +92,41 @@
   gap: calc(var(--margin) / 2);
   margin: 0 32px;
 }
-
+@media (width <= 1279px) {
+  .slider__list {
+    margin: 0 32px;
+  }
+}
+@media (width >= 886px) {
+  .slider__list-element *:not(:last-child) {
+    margin-right: 16px;
+  }
+}
+@media (width <= 886px) {
+  .slider__list {
+    width: 630px;
+    margin: 0 24px;
+  }
+  .slider__list-element *:not(:last-child) {
+    margin-right: 16px;
+  }
+}
+@media (width <= 768px) {
+  .slider__list {
+    width: 512px;
+  }
+}
+@media (width <= 640px) {
+  .slider__list {
+    width: 464px;
+    margin: 0 16px;
+  }
+}
+@media (width <= 375px) {
+  .slider__list {
+    width: 199px;
+  }
+}
 .slider__list-element {
   display: flex;
   align-items: center;
@@ -80,38 +139,12 @@
   text-wrap: nowrap;
   white-space: nowrap;
 }
-@media (max-width: 1279px) {
-  .slider__list {
-    margin: 0 32px;
-  }
-}
-
-@media (min-width: 886px) {
+@media (width <= 886px) {
   .slider__list-element *:not(:last-child) {
     margin-right: 16px;
   }
 }
-
-@media (max-width: 886px) {
-  .slider__list {
-    width: 630px;
-    margin: 0 24px;
-  }
-  .slider__list-element *:not(:last-child) {
-    margin-right: 16px;
-  }
-}
-@media (max-width: 768px) {
-  .slider__list-element {
-    flex-direction: column;
-    padding: 16px 16px;
-  }
-  .slider__list {
-    width: 512px;
-  }
-  .weather__forecast-slider {
-    margin-top: -12px;
-  }
+@media (width <= 768px) {
   .slider__list-element {
     flex-direction: column;
     width: 100%;
@@ -119,20 +152,14 @@
     padding: 12px 16px;
     font-size: var(--font-size-m);
   }
+}
+
+@media (width <= 768px) {
   .slider__list-element *:not(:last-child) {
     margin-right: 0;
   }
 }
-
-@media (max-width: 640px) {
-  .slider__list {
-    width: 464px;
-    margin: 0 16px;
-  }
-  .slider__button {
-    min-width: 40px;
-    height: 32px;
-  }
+@media (width < 640px) {
   .slider__list-element {
     flex-direction: row;
     height: 48px;
@@ -140,18 +167,15 @@
     padding: 12px 16px;
     font-size: var(--font-size-m);
   }
-
   .slider__list-element *:not(:last-child) {
-    margin-right: 12px;
+    margin-right: 8px;
   }
-  .weather__forecast-slider {
-    margin-top: -16px;
+  .slider__list-element img {
+    width: 24px;
+    height: 24px;
   }
 }
-@media (max-width: 375px) {
-  .slider__list {
-    width: 199px;
-  }
+@media (width <= 375px) {
   .slider__list-element {
     flex-direction: column;
     align-items: center;
@@ -161,26 +185,7 @@
     font-size: var(--font-size-m);
     line-height: var(--font-size-m);
   }
-
   .slider__list-element *:not(:last-child) {
     margin-right: 0;
   }
-  .slider__list-element img {
-    width: 24px;
-    height: 24px;
-  }
-  .slider__button {
-    min-width: 40px;
-    height: 32px;
-  }
-
-  .icon-slider {
-    width: 6px;
-    height: 16px;
-  }
-  .weather__forecast-slider {
-    max-width: 311px;
-  }
-}
-@media (max-width: 320px) {
 }

@@ -23,7 +23,7 @@
 
   --button-color: #a6a6a6;
   --button-color-active: var(--color-font-main);
-
+  --button-bg: rgba(245, 244, 244, 0.4);
   --margin: 32px;
   --gap: 16px;
   --radius: 8px;
