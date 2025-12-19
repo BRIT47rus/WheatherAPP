@@ -143,9 +143,13 @@ export class Card {
     }
 
     const progressiveLineElement = this.#createNode('div', 'progress-line');
+    const thumBefore = this.#createNode('div', 'thumBefore');
+
     const thumbElement = this.#createNode('div', 'thumb');
 
     progressiveLineElement.appendChild(thumbElement);
+    progressiveLineElement.appendChild(thumBefore);
+
     barElement.appendChild(progressiveLineElement);
     return barElement;
   }

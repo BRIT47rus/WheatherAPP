@@ -97,10 +97,19 @@
 .header__search .icon {
   color: #545454;
 }
-.header__search :focus-visible {
-  outline: 2px var(--color-accesability) solid;
+.header__search-btn {
+  width: 16px;
+  height: 16px;
+  background-image: url('../../public/images/search.svg');
+  background-repeat: no-repeat;
+  border: none;
+  background-color: transparent;
+}
+.header__search :focus-visible + .header__search-btn {
+  background-image: url('../../public/images/close.svg');
+  cursor: pointer;
 }
 
-.header__search .icon:hover {
-  color: #202020;
+.header__search.has-text .header__search-btn {
+  background-image: url('../../public/images/close.svg');
 }

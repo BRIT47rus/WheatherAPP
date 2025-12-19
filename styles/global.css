@@ -36,7 +36,8 @@ body {
   display: flex;
   height: 100%;
   flex-direction: column;
-  background-color: rgba(255, 255, 255, 0.1);
+  /* background-color: rgba(255, 255, 255, 0.1); */
+  background-color: rgba(112, 112, 112, 0.1);
   backdrop-filter: blur(25px);
   border-radius: var(--radius);
   min-width: 1120px;

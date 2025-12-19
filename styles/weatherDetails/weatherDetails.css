@@ -25,6 +25,7 @@
 }
 
 .weather__cards {
+  --card-bg: rgba(245, 244, 244, 0.4);
   display: grid;
   grid-area: header;
   grid-template-columns: repeat(3, var(--size-card-w));
@@ -68,8 +69,9 @@
   justify-items: center;
   padding: calc(var(--margin) / 2);
   border-radius: var(--radius);
-  background: var(--bg-opacity);
+  background-color: var(--card-bg);
   color: var(--color-font-details);
+  z-index: 0;
 }
 @media (width <= 1023px) {
   .weather__card {
@@ -165,7 +167,8 @@
   border-radius: var(--radius);
   overflow: hidden;
   background-color: rgba(218, 218, 218, 0.4);
-  mask-image: linear-gradient(to right, transparent 0%, white 0%, white 100%, transparent 100%);
+
+  /* mask-image: linear-gradient(to right, transparent 0%, white 0%, white 100%, transparent 100%); */
 }
 
 @media (width < 886px) {
@@ -196,6 +199,7 @@
   position: relative;
   height: var(--thumb-size);
   width: calc(var(--width-bar) - var(--thumb-size));
+  /* background-color: rgba(245, 244, 244, 0.4); */
 }
 .dangers {
   position: absolute;
@@ -204,13 +208,13 @@
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
-  background: radial-gradient(
+  /* background: radial-gradient(
     50% 9453.13% at 50% 50%,
     rgba(84, 84, 84, 0.4) 0%,
     rgba(138, 138, 138, 0.4) 45.12%,
     #dadada 100%,
     rgba(218, 218, 218, 0.4) 100%
-  );
+  ); */
 }
 
 .thumb {
@@ -218,18 +222,10 @@
   border-radius: 50%;
   width: var(--thumb-size);
   height: var(--thumb-size);
-}
-.thumb::after {
-  content: ' ';
-  background-color: #ffffff;
-  position: absolute;
-  top: 0;
-  left: 0;
-  border-radius: 50%;
-  width: var(--thumb-size);
-  height: var(--thumb-size);
+  background-color: rgba(245, 244, 244, 1);
   z-index: 1;
 }
+
 .thumb::before {
   content: '';
   position: absolute;
@@ -240,13 +236,16 @@
   transform: translate(-50%, -50%);
   border-radius: 50%;
   z-index: 0;
-
-  background: rgba(255, 255, 255, 0.2);
-
-  -webkit-mask-image: radial-gradient(circle at center, white, transparent 100%);
-  mask-image: radial-gradient(circle at center, white, transparent 100%);
+  /* background-color: rgba(218, 218, 218, 0.4); */
+  /* background-color: #fff; */
+  background-color: var(--card-bg);
+  /* background: rgba(255, 255, 255, 0.1); */
+  /* mask: radial-gradient(circle 20px at center, #000 4px, transparent 4px, transparent 6px, #000 0); */
+  -webkit-mask-image: radial-gradient(circle 12px at center, transparent 100%, black 100%);
+  mask-image: radial-gradient(radial-gradient(circle 12px at center, transparent 100%, black 100%));
 }
-.icon-weather {
+
+*/ .icon-weather {
   --size: 32px;
   width: var(--size);
   height: var(--size);
