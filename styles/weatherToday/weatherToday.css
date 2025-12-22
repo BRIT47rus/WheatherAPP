@@ -8,27 +8,27 @@
   height: 408px;
   padding: 4px 8px 8px;
 }
-@media (width>= 1280px) {
+@media (width > 1280px) {
   .weather__today {
     width: 534px;
     gap: 64px;
   }
 }
-@media (width>= 1024px) {
+@media (width >= 1024px) {
   .weather__today {
     height: 408px;
     gap: 48px;
     padding: 8px;
   }
 }
-@media (width <= 1023px) {
+@media (width < 1024px) {
   .weather__today {
     height: 306px;
     gap: 24px;
     padding: 4px 8px;
   }
 }
-@media (width < 886px) {
+@media (width <= 886px) {
   .weather__today {
     padding: 0 8px;
   }
@@ -38,7 +38,7 @@
     padding: 0 8px;
   }
 }
-@media (width < 640px) {
+@media (width <= 640px) {
   .weather__today {
     height: 184px;
     gap: 14px;
@@ -57,14 +57,12 @@
 }
 @media (width >= 1280px) {
   .weather__today-place {
-    height: 96px;
     gap: 8px;
     line-height: 24px;
   }
 }
 @media (width < 1280px) {
   .weather__today-place {
-    height: 128px;
   }
 }
 
@@ -75,18 +73,16 @@
 }
 @media (width < 1024px) {
   .weather__today-place {
-    height: 92px;
     gap: 8px;
   }
 }
-@media (width < 886px) {
+@media (width <= 886px) {
   .weather__today-place {
     gap: 6px;
   }
 }
-@media (width < 640px) {
+@media (width <= 640px) {
   .weather__today-place {
-    height: 60px;
     line-height: 16px;
     gap: 4px;
   }
@@ -96,17 +92,17 @@
   font-weight: 700;
   font-size: var(--font-size-xl);
 }
-@media (width>= 1024px) {
+@media (width >= 1024px) {
   .weather__today-title {
     line-height: 32px;
   }
 }
-@media (width < 886px) {
+@media (width <= 886px) {
   .weather__today-title {
     line-height: 32px;
   }
 }
-@media (width < 640px) {
+@media (width <= 640px) {
   .weather__today-title {
     line-height: 20px;
   }
@@ -118,17 +114,17 @@
   align-items: center;
 }
 
-@media (width>= 1024px) {
+@media (width >= 1024px) {
   .weather__today-temperature-wrapp {
     line-height: 112px;
   }
 }
-@media (width < 886px) {
+@media (width <= 886px) {
   .weather__today-temperature-wrapp {
     line-height: 112px;
   }
 }
-@media (width < 640px) {
+@media (width <= 640px) {
   .weather__today-temperature-wrapp {
     line-height: 56px;
   }
@@ -160,14 +156,14 @@
 .weather__today-info span {
   margin-left: calc(var(--margin) / 4);
 }
-@media (width>= 1024px) {
+@media (width >= 1024px) {
   .weather__today-sence {
     height: 56px;
     line-height: 29px;
   }
 }
 
-@media (width <= 1023px) {
+@media (width < 1024px) {
   .weather__today-sence {
     height: 54px;
   }

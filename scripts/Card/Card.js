@@ -48,6 +48,7 @@ export class Card {
    * @param {string|number} [value=''] - содержимое
    * @returns {HTMLElement} node - возвращаемая разметка
    * @param {string} [label=""] - знак
+   
    */
   static #createNode(element, className = '', value = '', label = '') {
     const node = document.createElement(element);
@@ -92,6 +93,7 @@ export class Card {
       case 'distance': {
         const isBarometr = data.typeState === 'barometr';
         const barElement = this.#createBarElement(isBarometr);
+        /** @type {HTMLElement | null} */
         const thumb = barElement.querySelector('.thumb');
 
         if (thumb) {
@@ -107,7 +109,7 @@ export class Card {
         const percentDiv = this.#createNode('div', 'weather__card-percent');
         const spanPercntLeft = this.#createNode('span', '', '0%');
         const spanPercntRight = this.#createNode('span', '', '100%');
-
+        /** @type {HTMLElement | null} */
         const thumb = barPercent.querySelector('.thumb');
         if (thumb) {
           thumb.style.left = `${positionPercent}%`;
@@ -143,12 +145,12 @@ export class Card {
     }
 
     const progressiveLineElement = this.#createNode('div', 'progress-line');
-    const thumBefore = this.#createNode('div', 'thumBefore');
+    // const thumBefore = this.#createNode('div', 'thumBefore');
 
     const thumbElement = this.#createNode('div', 'thumb');
 
     progressiveLineElement.appendChild(thumbElement);
-    progressiveLineElement.appendChild(thumBefore);
+    // progressiveLineElement.appendChild(thumBefore);
 
     barElement.appendChild(progressiveLineElement);
     return barElement;

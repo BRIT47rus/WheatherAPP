@@ -3,7 +3,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: var(--margin) calc(var(--margin) / 2);
+  padding: var(--margin);
   font-family: 'Raleway', sans-serif;
   font-weight: 400;
   line-height: 24px;
@@ -12,23 +12,32 @@ body {
   -webkit-font-smoothing: antialiased;
   display: flex;
   justify-content: center;
+  align-items: start;
   color: var(--color-font-main);
   background-image: url('../public/images/bgWeather.jpg');
-  background-size: cover;
-  background-position: center center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-color: var(--color-font-secondary);
+  background-position: center;
+  background-size: cover;
   overflow-x: hidden;
+  min-height: 100dvh;
 }
-@media (width<= 886px) {
+@media (width >= 1024px) {
+  body {
+  }
+}
+@media (width <= 886px) {
   body {
     overflow-x: none;
   }
 }
-@media (width < 640px) {
+@media (width < 1024px) {
   body {
-    padding: var(--margin);
+    padding: 24px;
+  }
+}
+@media (width <= 640px) {
+  body {
+    padding: 16px;
   }
 }
 
@@ -36,7 +45,6 @@ body {
   display: flex;
   height: 100%;
   flex-direction: column;
-  /* background-color: rgba(255, 255, 255, 0.1); */
   background-color: rgba(112, 112, 112, 0.1);
   backdrop-filter: blur(25px);
   border-radius: var(--radius);
@@ -53,27 +61,27 @@ body {
 @media (width >= 1024px) {
   .container {
     max-width: 1120px;
-    width: 960px;
+    min-width: 960px;
   }
 }
-@media (width<= 1023px) {
+@media (width < 1024px) {
   .container {
     height: 100%;
   }
 }
-@media (width< 886px) {
+@media (width <= 886px) {
   .container {
     width: 838px;
     min-width: 720px;
   }
 }
-@media (width< 768px) {
+@media (width<= 768px) {
   .container {
     min-width: 608px;
     max-width: 720px;
   }
 }
-@media (width<= 640px) {
+@media (width <= 640px) {
   .container {
     min-width: 343px;
   }
@@ -82,9 +90,19 @@ body {
   width: 100%;
   padding: var(--margin);
 }
-@media (width>= 1024px) {
+@media (width >= 1024px) {
   .full-width-padd {
     padding: 32px;
+  }
+}
+@media (width < 1024px) {
+  .full-width-padd {
+    padding: 24px;
+  }
+}
+@media (width <= 640px) {
+  .full-width-padd {
+    padding: 16px;
   }
 }
 
@@ -105,15 +123,15 @@ body {
   content: '°';
 }
 .screen-reader-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
   overflow: hidden !important;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border-width: 0;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border-width: 0 !important;
 }
 .active-button {
   color: var(--color-font-main);

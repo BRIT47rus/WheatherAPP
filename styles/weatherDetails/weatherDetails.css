@@ -16,7 +16,7 @@
     margin-top: 0;
   }
 }
-@media (width <= 320px) {
+@media (width <= 342px) {
   .weather__cards {
     grid-template-columns: repeat(2, var(--size-card-w));
     grid-template-rows: repeat(2, var(--size-card-h));
@@ -34,7 +34,7 @@
   justify-content: center;
   align-items: center;
 }
-@media (width <= 1023px) {
+@media (width < 1024px) {
   .weather__cards {
     --size-card-w: 163px;
     gap: 12px;
@@ -45,7 +45,7 @@
     --size-card-w: minmax(128px, 163px);
   }
 }
-@media (width <640px) {
+@media (width <= 640px) {
   .weather__cards {
     --size-card-w: minmax(98px, 128px);
     --size-card-h: 148px;
@@ -56,6 +56,13 @@
 @media (width <= 375px) {
   .weather__cards {
     --size-card-w: 98px;
+  }
+}
+@media (width <=342px) {
+  .weather__cards {
+    grid-area: header;
+    grid-template-columns: repeat(2, var(--size-card-w));
+    grid-template-rows: repeat(3, var(--size-card-h));
   }
 }
 
@@ -73,13 +80,13 @@
   color: var(--color-font-details);
   z-index: 0;
 }
-@media (width <= 1023px) {
+@media (width < 1024px) {
   .weather__card {
     padding: 16px;
   }
 }
 
-@media (width < 640px) {
+@media (width <= 640px) {
   .weather__card {
     grid-template-rows: 16px 24px 22px 1fr;
     gap: 12px;
@@ -122,10 +129,7 @@
   gap: 8px;
   height: 100%;
 }
-@media (width < 768px) {
-  .wheater__card-content {
-  }
-}
+
 @media (width <= 640px) {
   .wheater__card-content {
     gap: 6px;
@@ -165,13 +169,10 @@
   width: var(--width-bar);
   height: var(--thumb-size);
   border-radius: var(--radius);
-  overflow: hidden;
-  background-color: rgba(218, 218, 218, 0.4);
-
-  /* mask-image: linear-gradient(to right, transparent 0%, white 0%, white 100%, transparent 100%); */
+  mask-image: linear-gradient(to right, transparent 0%, white 0%, white 100%, transparent 100%);
 }
 
-@media (width < 886px) {
+@media (width <= 886px) {
   .weather__card-bar {
     --width-bar: 131px;
     --thumb-size: 8px;
@@ -183,7 +184,7 @@
     --thumb-size: 8px;
   }
 }
-@media (width < 640px) {
+@media (width <= 640px) {
   .weather__card-bar {
     --width-bar: 104px;
     --thumb-size: 6px;
@@ -196,10 +197,10 @@
 }
 
 .progress-line {
-  position: relative;
+  position: absolute;
+  left: 0;
   height: var(--thumb-size);
-  width: calc(var(--width-bar) - var(--thumb-size));
-  /* background-color: rgba(245, 244, 244, 0.4); */
+  width: calc(var(--width-bar) - var(--thumb-size) / 1.5);
 }
 .dangers {
   position: absolute;
@@ -208,44 +209,55 @@
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
-  /* background: radial-gradient(
-    50% 9453.13% at 50% 50%,
+  height: 100%;
+  background: radial-gradient(
+    50% 200% at 50% 50%,
     rgba(84, 84, 84, 0.4) 0%,
-    rgba(138, 138, 138, 0.4) 45.12%,
-    #dadada 100%,
+    rgba(138, 138, 138, 0.4) 28.12%,
+    #dadada 98%,
     rgba(218, 218, 218, 0.4) 100%
-  ); */
+  );
 }
 
 .thumb {
   position: relative;
-  border-radius: 50%;
   width: var(--thumb-size);
   height: var(--thumb-size);
   background-color: rgba(245, 244, 244, 1);
-  z-index: 1;
+  border-radius: 50%;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .thumb::before {
   content: '';
   position: absolute;
+
   top: 50%;
   left: 50%;
-  height: calc(var(--thumb-size) + 4px);
-  width: calc(var(--thumb-size) + 4px);
   transform: translate(-50%, -50%);
-  border-radius: 50%;
-  z-index: 0;
-  /* background-color: rgba(218, 218, 218, 0.4); */
-  /* background-color: #fff; */
+  min-width: calc(var(--width-bar) * 2);
+  min-height: calc(var(--width-bar) * 2);
+
   background-color: var(--card-bg);
-  /* background: rgba(255, 255, 255, 0.1); */
-  /* mask: radial-gradient(circle 20px at center, #000 4px, transparent 4px, transparent 6px, #000 0); */
-  -webkit-mask-image: radial-gradient(circle 12px at center, transparent 100%, black 100%);
-  mask-image: radial-gradient(radial-gradient(circle 12px at center, transparent 100%, black 100%));
+  border-radius: 50%;
+  z-index: -1;
+
+  -webkit-mask-image: radial-gradient(
+    circle calc(var(--thumb-size) / 2 + 4px) at center,
+    transparent 100%,
+    black 100%
+  );
+  mask-image: radial-gradient(
+    circle calc(var(--thumb-size) / 2 + 2px) at center,
+    transparent 100%,
+    black 100%
+  );
 }
 
-*/ .icon-weather {
+.icon-weather {
   --size: 32px;
   width: var(--size);
   height: var(--size);

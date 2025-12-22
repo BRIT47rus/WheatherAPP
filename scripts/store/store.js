@@ -67,10 +67,9 @@ const futureWheather = {
     { time: '18:00', icon: './public/images/weaterIcon/cloudly.svg', temperature: '-7' },
     { time: '21:00', icon: './public/images/weaterIcon/cloudly.svg', temperature: '-9' },
     { time: '00:00', icon: './public/images/weaterIcon/cloudly.svg', temperature: '-11' },
-    { time: '00:00', icon: './public/images/weaterIcon/cloudly.svg', temperature: '-11' },
-    { time: '00:00', icon: './public/images/weaterIcon/cloudly.svg', temperature: '-11' },
-    { time: '00:00', icon: './public/images/weaterIcon/cloudly.svg', temperature: '-11' },
-    { time: '00:00', icon: './public/images/weaterIcon/cloudly.svg', temperature: '-11' },
+    { time: '03:00', icon: './public/images/weaterIcon/cloudly.svg', temperature: '-13' },
+    { time: '06:00', icon: './public/images/weaterIcon/cloudly.svg', temperature: '-11' },
+    { time: '09:00', icon: './public/images/weaterIcon/cloudly.svg', temperature: '-11' },
   ],
   week: [
     {

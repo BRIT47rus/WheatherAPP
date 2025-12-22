@@ -9,12 +9,12 @@
   justify-content: center;
 }
 
-@media (width>= 1023px) {
+@media (width >= 1024px) {
   .weather {
     gap: 64px calc(var(--margin) / 2);
   }
 }
-@media (width< 1024px) {
+@media (width < 1024px) {
   .weather {
     grid-template-columns: 1fr;
     grid-template-rows: 306px 404px auto;
@@ -25,17 +25,22 @@
     gap: 48px;
   }
 }
+@media (width <= 768px) {
+  .weather {
+    grid-template-rows: 306px 404px 191px;
+  }
+}
 
-@media (width < 640px) {
+@media (width <= 640px) {
   .weather {
     gap: 32px;
     grid-template-rows: 184px 304px auto;
   }
 }
 
-@media (width<= 320px) {
+@media (width<= 342px) {
   .weather {
     gap: 8px;
-    grid-template-rows: 184px 462px auto;
+    grid-template-rows: 184px 462px 130px;
   }
 }
