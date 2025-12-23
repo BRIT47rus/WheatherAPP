@@ -1,7 +1,6 @@
 const pathSpriteSvg = './public/icons-sprite.svg';
 
 function handleSearchButtonClick(icon, event, input) {
-  // const currentIcon = icon.getAttribute('href').split(pathSpriteSvg)[1];
   if (input.value.trim().length > 0) {
     input.value = '';
     changeValueSearchInput({ target: input }, event.target, icon);

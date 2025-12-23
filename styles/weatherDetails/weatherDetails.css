@@ -2,10 +2,7 @@
   --size-card-h: 196px;
   --size-card-w: 158px;
 }
-@media (width >= 1279px) {
-  .weather__details {
-  }
-}
+
 @media (width <= 768px) {
   .weather__details {
     margin-top: 0;

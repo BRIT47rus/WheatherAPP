@@ -20,11 +20,9 @@ body {
   background-size: cover;
   overflow-x: hidden;
   min-height: 100dvh;
+  background-attachment: fixed;
 }
-@media (width >= 1024px) {
-  body {
-  }
-}
+
 @media (width <= 886px) {
   body {
     overflow-x: none;
